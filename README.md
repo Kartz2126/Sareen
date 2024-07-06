@@ -13,36 +13,37 @@
             height: 100vh;
             margin: 0;
             background-color: #f0f0f0;
+            padding: 10px;
+            box-sizing: border-box;
         }
         .container {
             text-align: center;
             background: white;
-            padding: 10px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 90%;
+            width: 100%;
             max-width: 400px;
             box-sizing: border-box;
-            word-wrap: break-word;
         }
         .button {
-            padding: 8px 16px;
-            margin: 8px;
+            padding: 10px;
+            margin: 10px;
             border: none;
             border-radius: 5px;
             background-color: #007bff;
             color: white;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
             transition: all 0.3s;
-            display: block;
-            width: calc(100% - 16px);
         }
         .button:hover {
             background-color: #0056b3;
         }
         h1 {
-            font-size: 16px;
+            font-size: 18px;
         }
     </style>
 </head>
@@ -63,7 +64,7 @@
 
         noButton.onclick = function() {
             noClickCount++;
-            yesButton.style.fontSize = (14 + noClickCount * 4) + 'px';
+            yesButton.style.fontSize = (16 + noClickCount * 4) + 'px';
             switch (noClickCount) {
                 case 1:
                     noButton.innerText = 'Adichi saavedichiruve';
