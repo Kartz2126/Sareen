@@ -6,58 +6,75 @@
     <title>Tommy Question</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f0f0;
         }
         .container {
             text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        button {
-            margin: 10px;
+        .button {
             padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
             font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <p>Can you send me a photo of Tommy?</p>
-        <button id="yesButton">Yes</button>
-        <button id="noButton">No</button>
+        <h1>Can you send me a photo of Tommy?</h1>
+        <button class="button" id="yesButton">Yes</button>
+        <button class="button" id="noButton">No</button>
     </div>
     <script>
-        const yesButton = document.getElementById('yesButton');
-        const noButton = document.getElementById('noButton');
-        const catGifUrl = 'https://giphy.com/gifs/rBszdmXbzglQUX7N4j';
+        document.getElementById('yesButton').onclick = function() {
+            window.location.href = 'https://giphy.com/gifs/rBszdmXbzglQUX7N4j';
+        };
 
-        const noButtonTexts = [
-            'Adichi saavedichiruve',
-            'I miss Tommy',
-            'Pleaseeee',
-            'Cut panniruve',
-            'Ungaluku vere vali iruku nenekiringelaa?',
-            'Ungalukella manasatchiye illeya?',
-            'Kalnenjakaare',
-            'Yes'
-        ];
-
-        yesButton.addEventListener('click', () => {
-            window.location.href = catGifUrl;
-        });
-
-        let noClickCount = 0;
-        noButton.addEventListener('click', () => {
-            if (noClickCount < noButtonTexts.length) {
-                noButton.textContent = noButtonTexts[noClickCount];
-                noClickCount++;
-            }
-            if (noClickCount === noButtonTexts.length) {
-                yesButton.style.display = 'inline';
-            }
-        });
+        let noButton = document.getElementById('noButton');
+        noButton.onclick = function() {
+            noButton.innerText = 'Adichi saavedichiruve';
+            noButton.onclick = function() {
+                noButton.innerText = 'I miss Tommy';
+                noButton.onclick = function() {
+                    noButton.innerText = 'Pleaseeee';
+                    noButton.onclick = function() {
+                        noButton.innerText = 'Cut panniruve';
+                        noButton.onclick = function() {
+                            noButton.innerText = 'Ungaluku vere vali iruku nenekiringelaa?';
+                            noButton.onclick = function() {
+                                noButton.innerText = 'Ungalukella manasatchiye illeya?';
+                                noButton.onclick = function() {
+                                    noButton.innerText = 'Kalnenjakaare';
+                                    noButton.onclick = function() {
+                                        noButton.innerText = 'Yes';
+                                        noButton.onclick = function() {
+                                            window.location.href = 'https://giphy.com/gifs/rBszdmXbzglQUX7N4j';
+                                        };
+                                    };
+                                };
+                            };
+                        };
+                    };
+                };
+            };
+        };
     </script>
 </body>
 </html>
