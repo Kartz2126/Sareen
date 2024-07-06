@@ -1,4 +1,4 @@
-![image](https://github.com/Kartz2126/Sareen/assets/174878664/2bcd2386-a5cd-431e-a686-d7921588c741)<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,7 +31,7 @@
     <script>
         const yesButton = document.getElementById('yesButton');
         const noButton = document.getElementById('noButton');
-        const catGifUrl = 'https://media1.giphy.com/media/rBszdmXbzglQUX7N4j/giphy.gif?cid=6c09b952r8ksdljicnf2jrlzsbjyn26ak00r9tavhiaipcea&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g';
+        const catGifUrl = 'https://giphy.com/gifs/rBszdmXbzglQUX7N4j';
 
         const noButtonTexts = [
             'Adichi saavedichiruve',
