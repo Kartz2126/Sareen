@@ -22,6 +22,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 90%;
             box-sizing: border-box;
+            word-wrap: break-word;
         }
         .button {
             padding: 10px 20px;
@@ -31,11 +32,14 @@
             background-color: #007bff;
             color: white;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 14px;
             transition: all 0.3s;
         }
         .button:hover {
             background-color: #0056b3;
+        }
+        h1 {
+            font-size: 18px;
         }
     </style>
 </head>
@@ -56,7 +60,7 @@
 
         noButton.onclick = function() {
             noClickCount++;
-            yesButton.style.fontSize = (16 + noClickCount * 4) + 'px';
+            yesButton.style.fontSize = (14 + noClickCount * 4) + 'px';
             switch (noClickCount) {
                 case 1:
                     noButton.innerText = 'Adichi saavedichiruve';
