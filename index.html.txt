@@ -17,16 +17,17 @@
         .container {
             text-align: center;
             background: white;
-            padding: 20px;
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 90%;
+            width: 90%;
+            max-width: 400px;
             box-sizing: border-box;
             word-wrap: break-word;
         }
         .button {
-            padding: 10px 20px;
-            margin: 10px;
+            padding: 8px 16px;
+            margin: 8px;
             border: none;
             border-radius: 5px;
             background-color: #007bff;
@@ -34,12 +35,14 @@
             cursor: pointer;
             font-size: 14px;
             transition: all 0.3s;
+            display: block;
+            width: calc(100% - 16px);
         }
         .button:hover {
             background-color: #0056b3;
         }
         h1 {
-            font-size: 18px;
+            font-size: 16px;
         }
     </style>
 </head>
