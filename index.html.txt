@@ -20,6 +20,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
+            box-sizing: border-box;
         }
         .button {
             padding: 10px 20px;
@@ -30,6 +32,7 @@
             color: white;
             cursor: pointer;
             font-size: 16px;
+            transition: all 0.3s;
         }
         .button:hover {
             background-color: #0056b3;
@@ -43,37 +46,46 @@
         <button class="button" id="noButton">No</button>
     </div>
     <script>
-        document.getElementById('yesButton').onclick = function() {
+        let yesButton = document.getElementById('yesButton');
+        let noButton = document.getElementById('noButton');
+        let noClickCount = 0;
+        
+        yesButton.onclick = function() {
             window.location.href = 'https://giphy.com/gifs/rBszdmXbzglQUX7N4j';
         };
 
-        let noButton = document.getElementById('noButton');
         noButton.onclick = function() {
-            noButton.innerText = 'Adichi saavedichiruve';
-            noButton.onclick = function() {
-                noButton.innerText = 'I miss Tommy';
-                noButton.onclick = function() {
+            noClickCount++;
+            yesButton.style.fontSize = (16 + noClickCount * 4) + 'px';
+            switch (noClickCount) {
+                case 1:
+                    noButton.innerText = 'Adichi saavedichiruve';
+                    break;
+                case 2:
+                    noButton.innerText = 'I miss Tommy';
+                    break;
+                case 3:
                     noButton.innerText = 'Pleaseeee';
-                    noButton.onclick = function() {
-                        noButton.innerText = 'Cut panniruve';
-                        noButton.onclick = function() {
-                            noButton.innerText = 'Ungaluku vere vali iruku nenekiringelaa?';
-                            noButton.onclick = function() {
-                                noButton.innerText = 'Ungalukella manasatchiye illeya?';
-                                noButton.onclick = function() {
-                                    noButton.innerText = 'Kalnenjakaare';
-                                    noButton.onclick = function() {
-                                        noButton.innerText = 'Yes';
-                                        noButton.onclick = function() {
-                                            window.location.href = 'https://giphy.com/gifs/rBszdmXbzglQUX7N4j';
-                                        };
-                                    };
-                                };
-                            };
-                        };
-                    };
-                };
-            };
+                    break;
+                case 4:
+                    noButton.innerText = 'Cut panniruve';
+                    break;
+                case 5:
+                    noButton.innerText = 'Ungaluku vere vali iruku nenekiringelaa?';
+                    break;
+                case 6:
+                    noButton.innerText = 'Ungalukella manasatchiye illeya?';
+                    break;
+                case 7:
+                    noButton.innerText = 'Kalnenjakaare';
+                    break;
+                case 8:
+                    noButton.innerText = 'Yes';
+                    noButton.onclick = yesButton.onclick;
+                    break;
+                default:
+                    break;
+            }
         };
     </script>
 </body>
