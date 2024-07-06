@@ -46,7 +46,7 @@
         document.getElementById('yesButton').onclick = function() {
             window.location.href = 'https://giphy.com/gifs/rBszdmXbzglQUX7N4j';
         };
-        
+
         let noButton = document.getElementById('noButton');
         noButton.onclick = function() {
             noButton.innerText = 'Adichi saavedichiruve';
